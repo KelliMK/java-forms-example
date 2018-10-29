@@ -3,27 +3,34 @@
 <head>
 	<meta charset="UTF-8">
 	<title>My Blog</title>
+	<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-	<div class="container">
+	<div class="wrapper">
 		<header>
-			<h1>My Blog Posts</h1>
-			<nav>
-				<ul>
-					<li><a href="/posts">Posts</a></li>
-					<li><a href="/posts/add">Add Post</a></li>
-				</ul>
-			</nav>
+			<div class="container">
+				<h1>My Blog Posts</h1>
+				<nav>
+					<ul>
+						<li><a href="/posts">Posts</a></li>
+						<li><a href="/posts/add">Add Post</a></li>
+					</ul>
+				</nav>
+			</div>
 		</header>
 		<main>
-			<ul>
-				<li th:each="post : ${posts}">
-					<a th:href="|/posts/${post.id}|" th:text="${post.title}">Post</a>
-				</li>
-			</ul>
+			<div class="container">
+				<ul>
+					<li th:each="post : ${posts}">
+						<a th:href="|/posts/${post.id}|" th:text="${post.title}">Post</a>
+					</li>
+				</ul>
+			</div>
 		</main>
 		<footer>
-			<small>&copy; WCCI 2018</small>
+			<div class="container">
+				<small>&copy; WCCI 2018</small>
+			</div>
 		</footer>
 	</div>
 </body>

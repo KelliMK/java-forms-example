@@ -22,4 +22,10 @@ public class BlogController {
 		model.addAttribute("posts", postRepo.findAll());
 		return "posts/index";
 	}
+
+	@GetMapping("/posts/add")
+	public String addPost(Model model) {
+		model.addAttribute("posts", postRepo.findAll());
+		return "posts/index";
+	}
 }

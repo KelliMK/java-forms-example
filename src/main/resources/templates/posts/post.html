@@ -3,23 +3,30 @@
 <head>
 	<meta charset="UTF-8">
 	<title th:text="${post.title}">Title</title>
+	<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-	<div class="container">
+	<div class="wrapper">
 		<header>
-			<h1 th:text="${post.title}">Title</h1>
-			<nav>
-				<ul>
-					<li><a href="/posts">Posts</a></li>
-					<li><a href="/posts/add">Add Post</a></li>
-				</ul>
-			</nav>
+			<div class="container">
+				<h1 th:text="${post.title}">Title</h1>
+				<nav>
+					<ul>
+						<li><a href="/posts">Posts</a></li>
+						<li><a href="/posts/add">Add Post</a></li>
+					</ul>
+				</nav>
+			</div>
 		</header>
 		<main>
-			<p th:text="${post.content}">Content</p>
+			<div class="container">
+				<p th:text="${post.content}">Content</p>
+			</div>
 		</main>
 		<footer>
-			<small>&copy; WCCI 2018</small>
+			<div class="container">
+				<small>&copy; WCCI 2018</small>
+			</div>
 		</footer>
 	</div>
 </body>
