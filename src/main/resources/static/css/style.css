@@ -17,13 +17,27 @@ a {
 	text-decoration: none;
 }
 
+footer,
 header {
+	align-items: center;
 	background-color: var(--dark);
 	color: var(--light);
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+}
+
+footer {
+	justify-content: center;
 }
 
 ul {
+	display: flex;
 	list-style-type: none;
+}
+
+ul li {
+	padding: 1rem;
 }
 
 .container {
